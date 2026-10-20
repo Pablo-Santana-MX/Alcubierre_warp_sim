@@ -1,0 +1,6 @@
+{
+  "name": "Alcubierre Warp Metric Simulator & Spacetime Dashboard",
+  "description": "Simulador interactivo 3D en WebGL de la métrica de Alcubierre: deformación espacio-temporal en tiempo real, dinámica de burbuja warp, densidad de energía exótica T₀₀, ecuaciones holográficas y controles táctiles y gestuales.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
