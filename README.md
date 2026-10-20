@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/YOUR_USERNAME/alcubierre-warp-simulator">
+  <a href="https://github.com/Pablo-Santana-MX/alcubierre-warp-simulator">
     <img src="https://img.shields.io/badge/View_Source-GitHub-181717?style=for-the-badge&logo=github" alt="View source on GitHub">
   </a>
   <a href="https://YOUR_DEMO_URL.vercel.app">
