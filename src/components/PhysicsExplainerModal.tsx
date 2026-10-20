@@ -28,12 +28,14 @@ export const PhysicsExplainerModal: React.FC<PhysicsExplainerModalProps> = ({
   const t = translations[language];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm select-none">
-      <div className="relative w-full max-w-3xl bg-slate-950/95 border-2 border-cyan-500/40 rounded-2xl shadow-[0_0_60px_rgba(6,182,212,0.35)] overflow-hidden flex flex-col max-h-[90vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md select-none">
+      <div className="relative w-full max-w-3xl clay-crystal-panel overflow-hidden flex flex-col max-h-[90vh]">
         {/* Header */}
-        <div className="p-4 bg-slate-900/90 border-b border-cyan-500/30 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <Atom className="w-5 h-5 text-cyan-400" />
+        <div className="p-4 sm:p-5 bg-slate-900/60 border-b border-white/10 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+              <Atom className="w-5 h-5 text-cyan-300" />
+            </div>
             <div>
               <h2 className="font-orbitron text-sm font-bold text-cyan-200 uppercase tracking-wider">
                 {t.explainerTitle}
@@ -45,9 +47,9 @@ export const PhysicsExplainerModal: React.FC<PhysicsExplainerModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+            className="p-2 rounded-xl clay-button text-slate-300 hover:text-white"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 text-cyan-300" />
           </button>
         </div>
 

@@ -96,11 +96,11 @@ export const BottomControlDock: React.FC<BottomControlDockProps> = ({
       </div>
 
       {/* Main Glassmorphic Dock Container */}
-      <div className="bg-slate-950/92 border border-cyan-500/30 rounded-2xl p-3 sm:p-4 shadow-[0_0_35px_rgba(2,6,23,0.85)] border-t-cyan-400/50">
+      <div className="clay-crystal-panel p-3.5 sm:p-5">
         {/* Top Control Bar: Tabs & Quick Action Buttons */}
-        <div className="flex flex-wrap items-center justify-between gap-2 pb-2.5 sm:pb-3 border-b border-slate-800/80">
+        <div className="flex flex-wrap items-center justify-between gap-2 pb-2.5 sm:pb-3 border-b border-white/10">
           {/* Category Tabs (Horizontally scrollable on mobile) */}
-          <div className="flex items-center gap-1 bg-slate-900/90 p-1 rounded-xl border border-slate-800 overflow-x-auto max-w-full scrollbar-none">
+          <div className="flex items-center gap-1 neumorphic-inset p-1 overflow-x-auto max-w-full scrollbar-none">
             <button
               onClick={() => setActiveTab('physics')}
               className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-mono-code font-semibold transition-all shrink-0 cursor-pointer ${

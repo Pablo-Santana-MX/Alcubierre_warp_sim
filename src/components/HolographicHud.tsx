@@ -85,8 +85,8 @@ export const HolographicHud: React.FC<HolographicHudProps> = ({
   return (
     <div className="fixed top-14 right-2 sm:top-16 sm:right-4 z-20 flex flex-col gap-2 pointer-events-none select-none max-w-[calc(100vw-1rem)] sm:max-w-[320px]">
       {/* Primary HUD Card */}
-      <div className="pointer-events-auto bg-slate-950/92 border border-cyan-500/40 rounded-xl p-3 sm:p-3.5 backdrop-blur-none shadow-[0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300">
-        <div className="flex items-center justify-between pb-2 border-b border-cyan-500/20">
+      <div className="pointer-events-auto clay-crystal-panel p-3.5 sm:p-4 transition-all duration-300">
+        <div className="flex items-center justify-between pb-2 border-b border-white/10">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-sm bg-cyan-400 shadow-[0_0_8px_#22d3ee]" />
             <h3 className="font-orbitron text-xs font-bold tracking-wider text-cyan-300 uppercase">
@@ -96,14 +96,14 @@ export const HolographicHud: React.FC<HolographicHudProps> = ({
           <div className="flex items-center gap-1.5">
             <button
               onClick={onToggleExpand}
-              className="text-[10px] font-mono-code px-1.5 sm:px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-900/40 transition-colors cursor-pointer"
+              className="text-[10px] font-mono-code px-2 py-1 clay-button text-cyan-300"
               title={isExpanded ? (language === 'es' ? 'Ver menos detalles' : 'View less details') : (language === 'es' ? 'Ver más telemetría' : 'View more telemetry')}
             >
               {isExpanded ? t.hudMin : t.hudExp}
             </button>
             <button
               onClick={onToggleVisibility}
-              className="p-1 rounded bg-slate-800/80 hover:bg-red-950/60 text-slate-400 hover:text-red-400 border border-slate-700 hover:border-red-500/40 transition-colors cursor-pointer"
+              className="p-1.5 rounded-xl clay-button text-slate-400 hover:text-red-400"
               title={t.hudClose}
             >
               <X className="w-3.5 h-3.5" />
@@ -112,13 +112,13 @@ export const HolographicHud: React.FC<HolographicHudProps> = ({
         </div>
 
         {/* Profile Info */}
-        <div className="flex justify-between items-center text-[11px] font-mono-code text-slate-400 mt-2">
+        <div className="flex justify-between items-center text-[11px] font-mono-code text-slate-300 mt-2.5 px-1">
           <span>{t.hudTransverseCut} {params.yCut.toFixed(1)}</span>
           <span className="text-red-400 font-semibold">{t.hudExoticBadge}</span>
         </div>
 
         {/* 2D Curve Canvas/SVG matching ManimGX build_hud */}
-        <div className="relative mt-2 bg-slate-900/90 rounded-lg p-1.5 border border-slate-800">
+        <div className="relative mt-2.5 neumorphic-inset p-2">
           <svg viewBox="0 0 280 120" className="w-full h-24 overflow-visible">
             {/* Grid background lines */}
             <line x1="20" y1={zeroY} x2="260" y2={zeroY} stroke="#475569" strokeWidth="1" strokeDasharray="3,3" />
